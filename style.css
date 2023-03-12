@@ -22,7 +22,7 @@ input:checked ~ label {
     color: black;
 }
 
-label {
+.meme-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,15 +39,15 @@ input {
     opacity: 0.5;
 }
 
-.details {
+.meme-picture {
     display: block;
     margin: 0 auto;
     width: 0;
     transition: width 0.3s;
 }
 
-input:checked ~ .details,
-.option-block:hover .details {
+input:checked ~ label .meme-picture,
+.option-block:hover label .meme-picture {
     width: clamp(200px, 30%, 600px);
 }
 
