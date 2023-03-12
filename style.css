@@ -1,5 +1,16 @@
 body {
     margin: 0;
+    font-size: clamp(16px, 5vw, 24px);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+main {
+    width: clamp(310px, 80vw, 1500px);
+    margin: 0 auto;
 }
 
 .accordion label {
@@ -21,6 +32,9 @@ input {
     display: none;
 }
 
+
+/* ANIMATION */
+
 .option-block:active {
     opacity: 0.5;
 }
@@ -34,7 +48,7 @@ input {
 
 input:checked ~ .details,
 .option-block:hover .details {
-    width: 30%;
+    width: clamp(200px, 30%, 600px);
 }
 
 .plus-icon {
