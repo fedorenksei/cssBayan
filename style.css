@@ -13,8 +13,19 @@ main {
     margin: 0 auto;
 }
 
+.accordion {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
 .accordion label {
     color: blue;
+    cursor: pointer;
+}
+
+.option-block {
+    border-top: solid 1px lightgray;
 }
 
 .accordion:hover label,
@@ -26,6 +37,7 @@ input:checked ~ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px 0;
 }
 
 input {
