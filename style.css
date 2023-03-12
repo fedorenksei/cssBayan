@@ -1,3 +1,16 @@
+body {
+    margin: 0;
+}
+
+.accordion label {
+    color: blue;
+}
+
+.accordion:hover label,
+input:checked ~ label {
+    color: black;
+}
+
 label {
     display: block;
 }
@@ -6,10 +19,18 @@ input {
     display: none;
 }
 
-.details {
-    display: none;
+.option-block:active {
+    opacity: 0.5;
 }
 
-input:checked ~ .details {
+.details {
     display: block;
+    margin: 0 auto;
+    width: 0;
+    transition: width 0.3s;
+}
+
+input:checked ~ .details,
+.option-block:hover .details {
+    width: 30%;
 }
