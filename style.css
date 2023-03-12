@@ -12,7 +12,9 @@ input:checked ~ label {
 }
 
 label {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 input {
@@ -33,4 +35,19 @@ input {
 input:checked ~ .details,
 .option-block:hover .details {
     width: 30%;
+}
+
+.plus-icon {
+    visibility: hidden;
+    height: 15px;
+    transition: transform 0.3s;
+}
+
+.accordion:hover .plus-icon {
+    visibility: visible;
+}
+
+input:checked ~ label .plus-icon,
+.option-block:hover label .plus-icon {
+    transform: rotate(45deg);
 }
