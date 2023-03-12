@@ -52,13 +52,19 @@ h1 {
 }
 
 label {
-    color: blue;
+    color: black;
     cursor: pointer;
 }
 
-.accordion:hover label,
-input:checked ~ label {
-    color: black;
+@media (hover: hover) {
+    label {
+        color: blue;
+    }
+
+    .accordion:hover label,
+    input:checked ~ label {
+        color: black;
+    }
 }
 
 .meme-title {
@@ -85,22 +91,63 @@ input {
     transition: width 0.3s;
 }
 
-input:checked ~ label .meme-picture,
-.option-block:hover label .meme-picture {
-    width: clamp(200px, 30%, 600px);
+input:checked ~ label .meme-picture {
+    width: 80%;
+}
+
+@media (min-width: 820px) {
+    input:checked ~ label .meme-picture {
+        width: 60%
+    }
+}
+
+@media (min-width: 1920px) {
+    input:checked ~ label .meme-picture {
+        width: 40%
+    }
+}
+
+@media (hover: hover) {
+    input:checked ~ label .meme-picture {
+        transition: none;
+    }
+
+    .option-block:hover label .meme-picture {
+        width: 80%
+    }
+
+    @media (min-width: 820px) {
+        .option-block:hover label .meme-picture {
+            width: 60%
+        }
+    }
+    
+    @media (min-width: 1920px) {
+        .option-block:hover label .meme-picture {
+            width: 40%
+        }
+    }
 }
 
 .plus-icon {
-    visibility: hidden;
     height: 1rem;
     transition: transform 0.3s;
 }
 
-.accordion:hover .plus-icon {
-    visibility: visible;
+input:checked ~ label .plus-icon {
+    transform: rotate(45deg);
 }
 
-input:checked ~ label .plus-icon,
-.option-block:hover label .plus-icon {
-    transform: rotate(45deg);
+@media (hover: hover) {
+    .plus-icon {
+        visibility: hidden;
+    }
+
+    .accordion:hover .plus-icon {
+        visibility: visible;
+    }
+
+    .option-block:hover label .plus-icon {
+        transform: rotate(45deg);
+    }
 }
