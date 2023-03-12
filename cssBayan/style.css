@@ -1,29 +1,31 @@
-html {
-    font-size: 16px;
+main {
+    width: 95%;
+    margin: 0 auto;
 }
 
-main {
-    width: 310px;
-    margin: 0 auto;
+@media (min-width: 321px) {
+    main {
+        width: 80%;
+    }
 }
 
 @media (min-width: 820px) {
     html {
-        font-size: 18px;
+        font-size: 1.5em;
     }
 
     main {
-        width: 700px;
+        width: 65%;
     }
 }
 
 @media (min-width: 1920px) {
     html {
-        font-size: 24px;
+        font-size: 2em;
     }
 
     main {
-        width: 1500px;
+        width: 50%;
     }
 }
 
