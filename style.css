@@ -1,6 +1,36 @@
+html {
+    font-size: 16px;
+}
+
+main {
+    width: 310px;
+    margin: 0 auto;
+}
+
+@media (min-width: 820px) {
+    html {
+        font-size: 18px;
+    }
+
+    main {
+        width: 700px;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 24px;
+    }
+
+    main {
+        width: 1500px;
+    }
+}
+
+
+
 body {
     margin: 0;
-    font-size: clamp(16px, 5vw, 24px);
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -8,24 +38,22 @@ h1 {
     font-size: 1.5em;
 }
 
-main {
-    width: clamp(310px, 80vw, 1500px);
-    margin: 0 auto;
-}
+
+/* ACCORDION */
 
 .accordion {
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
-}
-
-.accordion label {
-    color: blue;
-    cursor: pointer;
+    row-gap: 1rem;
 }
 
 .option-block {
-    border-top: solid 1px lightgray;
+    border-top: solid 0.0625rem lightgray;
+}
+
+label {
+    color: blue;
+    cursor: pointer;
 }
 
 .accordion:hover label,
@@ -37,13 +65,12 @@ input:checked ~ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0;
+    padding: 0.5rem 0;
 }
 
 input {
     display: none;
 }
-
 
 /* ANIMATION */
 
@@ -65,7 +92,7 @@ input:checked ~ label .meme-picture,
 
 .plus-icon {
     visibility: hidden;
-    height: 15px;
+    height: 1rem;
     transition: transform 0.3s;
 }
 
