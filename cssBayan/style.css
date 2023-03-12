@@ -1,0 +1,155 @@
+main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media (min-width: 321px) {
+    main {
+        width: 80%;
+    }
+}
+
+@media (min-width: 820px) {
+    html {
+        font-size: 1.5em;
+    }
+
+    main {
+        width: 65%;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 2em;
+    }
+
+    main {
+        width: 50%;
+    }
+}
+
+
+
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+
+/* ACCORDION */
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.option-block {
+    border-top: solid 0.0625rem lightgray;
+}
+
+label {
+    color: black;
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    label {
+        color: blue;
+    }
+
+    .accordion:hover label,
+    input:checked ~ label {
+        color: black;
+    }
+}
+
+.meme-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+input {
+    display: none;
+}
+
+/* ANIMATION */
+
+.option-block:active {
+    opacity: 0.5;
+}
+
+.meme-picture {
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    transition: width 0.3s;
+}
+
+input:checked ~ label .meme-picture {
+    width: 80%;
+}
+
+@media (min-width: 820px) {
+    input:checked ~ label .meme-picture {
+        width: 60%
+    }
+}
+
+@media (min-width: 1920px) {
+    input:checked ~ label .meme-picture {
+        width: 40%
+    }
+}
+
+@media (hover: hover) {
+    input:checked ~ label .meme-picture {
+        transition: none;
+    }
+
+    .option-block:hover label .meme-picture {
+        width: 80%
+    }
+
+    @media (min-width: 820px) {
+        .option-block:hover label .meme-picture {
+            width: 60%
+        }
+    }
+    
+    @media (min-width: 1920px) {
+        .option-block:hover label .meme-picture {
+            width: 40%
+        }
+    }
+}
+
+.plus-icon {
+    height: 1rem;
+    transition: transform 0.3s;
+}
+
+input:checked ~ label .plus-icon {
+    transform: rotate(45deg);
+}
+
+@media (hover: hover) {
+    .plus-icon {
+        visibility: hidden;
+    }
+
+    .accordion:hover .plus-icon {
+        visibility: visible;
+    }
+
+    .option-block:hover label .plus-icon {
+        transform: rotate(45deg);
+    }
+}
